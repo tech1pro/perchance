@@ -1,43 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Text to Image Generator</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', Arial, sans-serif;
-            background: url(https://user-uploads.perchance.org/file/76617b3743f1fd3c462a9302a7552410.jpg) no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: Teal;
-            text-align: center;
-        }
-        h1 { font-size: 2.5em; margin-bottom: 20px; }
-        p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
-        a {
-            display: inline-block;
-            padding: 15px 40px;
-            background: CadetBlue;
-            color: RoyalBlue;
-            text-decoration: none;
-            border: 2px solid Turquoise;
-            border-radius: 10px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        a:hover { background: Turquoise; color: DarkBlue; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Moonlight – AI Text to Image Generators</title>
+
+  <!-- Your existing head content from index.html would stay here:
+       meta tags, links, scripts, etc. -->
+
+  <style>
+    /* Your existing styles from index.html go here, unchanged */
+
+    /* Perchance layout styles appended */
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: url(https://user-uploads.perchance.org/file/76617b3743f1fd3c462a9302a7552410.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: teal;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      min-height: 150vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-top: 1rem;
+    }
+    h2 {
+      font-size: 1em;
+      margin-top: 1rem;
+    }
+    p {
+      font-size: 85%;
+      opacity: 0.8;
+    }
+    button {
+      margin-bottom: 1rem;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid turquoise;
+      background: cadetblue;
+      color: royalblue;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 0 25px rebeccapurple;
+    }
+  </style>
 </head>
 <body>
-    <h1>AI Text to Image Generator</h1>
-    <p>Generate stunning AI-powered images with multiple style options</p>
-    <a href="https://perchance.org/ok2i2ma4me" target="_blank">🚀 Open Generator</a>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KNK23LZW');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <b>[generateHTML(settings)][generatorStats("views",)] Views</b>
+  <p>Last Update: 26.11.2025</p>
+
+  <div id="content" class="container">
+    <div id="fixedButtons" style="position: fixed; top: 0; right: 0; z-index: 1000;">
+      <button onclick="scrollToTop()" aria-label="Scroll to Top">⬆️ Top</button>
+      <button onclick="scrollToBottom()" aria-label="Scroll to Bottom">⬇️ Down</button>
+    </div>
+
+    <h1 id="PH" class="MoonLight">[$meta.title]</h1>
+    <h3><span id="clockEl"></span></h3>
+    <p>Glass was here</p>
+
+    <button id="generateBtn" onclick="scrollToGenerate()">Generate</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <button style="margin-bottom: 0">
+    Enter Generator url example pages url is ai-text-to-image-generators
+    <hr style="border: 1px solid grey">
+    <input id="assadas">
+    <span
+      onclick="window.generatorName = assadas.value; update(); alert('Chaneged generator to: ' + window.generatorName)"
+      style="cursor: pointer; border: 3px solid white; padding: 5px; border-radius: 15px; background-color: rgba(100,100,100,0.6)"
+    >
+      Update ♻️
+    </span>
+  </button>
+
+  <!-- Your existing scripts from index.html (if any) should remain here,
+       for example scrollToTop, scrollToBottom, scrollToGenerate, toggleDarkMode, etc. -->
 </body>
 </html>
