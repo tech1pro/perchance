@@ -5,28 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Text to Image Generator</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            background: url(https://user-uploads.perchance.org/file/76617b3743f1fd3c462a9302a7552410.jpg) no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: Teal;
+            text-align: center;
         }
-        
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
+        h1 { font-size: 2.5em; margin-bottom: 20px; }
+        p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
+        a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: CadetBlue;
+            color: RoyalBlue;
+            text-decoration: none;
+            border: 2px solid Turquoise;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.3s;
         }
+        a:hover { background: Turquoise; color: DarkBlue; }
     </style>
 </head>
 <body>
-    <iframe src="https://perchance.org/ok2i2ma4me" allow="microphone; camera"></iframe>
+    <h1>AI Text to Image Generator</h1>
+    <p>Generate stunning AI-powered images with multiple style options</p>
+    <a href="https://perchance.org/ok2i2ma4me" target="_blank">🚀 Open Generator</a>
 </body>
 </html>
